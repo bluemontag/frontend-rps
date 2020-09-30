@@ -29,7 +29,12 @@ class Game extends React.Component {
         // ajax loading state:
         this.setState({loading: true});
 
-        fetch('http://localhost:8081/game/playRound?userName=' + this.state.userName + '&player1Name=Player%201&player2Name=Player%202')
+        fetch('http://localhost:8081/game/playRound?userName=' + this.state.userName + '&player1Name=Player%201&player2Name=Player%202', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }})
         .then(res => res.json())
         .then(
           (result) => {
