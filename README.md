@@ -1,12 +1,8 @@
 # Rock Papers Scissors Game Front-end
 
-## Instructions
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Initialization of Front-end
 
-First of all, run the following command in the folder of the front-end project ("frontend-rps"):
+First of all, download the project in a local folder. Move to the new folder "frontend-rps" and run the following command:
 
 ### `npm install`
 
