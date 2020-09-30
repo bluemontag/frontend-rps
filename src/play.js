@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import newSessionID from './random-utils';
+import getAPIUrl from './conf';
 
 function Status(props) {
 
@@ -29,7 +30,12 @@ class Game extends React.Component {
         // ajax loading state:
         this.setState({loading: true});
 
-        fetch('http://localhost:8081/game/playRound?userName=' + this.state.userName + '&player1Name=Player%201&player2Name=Player%202')
+        fetch(getAPIUrl() + 'playRound?userName=' + this.state.userName + '&player1Name=Player 1&player2Name=Player 2',
+            { method: 'POST',
+              headers: { 'Accept': 'application/json',
+                         'Content-Type': 'application/json' }
+              
+            })
         .then(res => res.json())
         .then(
           (result) => {
